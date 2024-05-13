@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<h1 class="cap">
+Manual de CSS 
+</h1>
+
+<ul>
+  <li><a href="display.html">Visualización</a></li>
+  <li><a href="position.html">Posición</a></li>
+  <li><a href="z-index.html">Índice Z</a></li>
+  <li><a href="overflow.html">Desbordamiento</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Flotar y limpiar</a>
+    <div class="dropdown-content">
+      <a href="float.html">Flotar</a>
+      <a href="clear.html">Limpiar</a>
+      <a href="examples.html">Ejemplos de flotación</a>
+    </div>
+   </li>
+   <li><a href="inline.html">Visualización: inline-block</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Otros</a>
+    <div class="dropdown-content">
+      <a href="combinators.html">Combinadores</a>
+      <a href="p-classes.html">Pseudo-clases</a>
+      <a href="p-elements.html">Pseudo-elementos</a>
+    </div>
+   </li>
+</ul>
+
+<h2>Diseño CSS - La propiedad position</h2><hr>
+<p>La propiedad position especifica el tipo de método de posicionamiento utilizado para un elemento (estático, relativo, fijo, absoluto o pegajoso).</p>
+<h3>La propiedad position</h3>
+<p>La propiedad position especifica el tipo de método de posicionamiento utilizado para un elemento. Hay cinco valores diferentes de position:</p>
+<pre>
+
+    static
+    relative
+    fixed
+    absolute
+    sticky
+    
+</pre>
+<p>Los elementos luego se posicionan utilizando las propiedades top, bottom, left y right. Sin embargo, estas propiedades no funcionarán a menos que se establezca primero la propiedad position. También funcionan de manera diferente dependiendo del valor de position.</p>
+<h3>position: static;</h3>
+<p>Los elementos HTML están posicionados estáticamente de forma predeterminada. Los elementos posicionados estáticamente no se ven afectados por las propiedades top, bottom, left y right. Un elemento con position: static; no se posiciona de ninguna manera especial; siempre se posiciona según el flujo normal de la página:</p>
+
+<h3>position: relative;</h3>
+<p>Un elemento con position: relative; se posiciona relativo a su posición normal. Establecer las propiedades top, right, bottom y left de un elemento posicionado de forma relativa hará que se ajuste lejos de su posición normal. Otro contenido no se ajustará para adaptarse a ningún espacio dejado por el elemento.</p>
+
+<h3>position: fixed;</h3>
+<p>Un elemento con position: fixed; se posiciona relativo al viewport, lo que significa que siempre permanece en el mismo lugar incluso si se desplaza la página. Las propiedades top, right, bottom y left se utilizan para posicionar el elemento. Un elemento fijo no deja un espacio en la página donde normalmente habría estado ubicado.</p>
+
+<h3>position: absolute;</h3>
+<p>Un elemento con position: absolute; se posiciona relativo al ancestro posicionado más cercano (en lugar de posicionarse relativo al viewport, como fijo). Sin embargo, si un elemento posicionado absolutamente no tiene ancestros posicionados, utiliza el cuerpo del documento y se mueve junto con el desplazamiento de la página.</p>
+
+<p>Aquí hay un ejemplo simple:</p>
+<pre>
+
+    div.relative {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 3px solid #73AD21;
+    }
+
+    div.absolute {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: 100px;
+        border: 3px solid #73AD21;
+    }
+
+</pre>
+
+<h3>position: sticky;</h3>
+<p>Un elemento con position: sticky; se posiciona según la posición de desplazamiento del usuario. Un elemento pegajoso alterna entre relativo y fijo, dependiendo de la posición de desplazamiento. Se posiciona relativo hasta que se cumple una posición de desplazamiento dada en el viewport; entonces se "pega" en su lugar (como position: fixed).</p>
+
+<p>En este ejemplo, el elemento pegajoso se adhiere a la parte superior de la página (top: 0), cuando se alcanza su posición de desplazamiento.</p>
+<pre>
+
+    div.sticky {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        background-color: green;
+        border: 2px solid #4CAF50;
+    }
+
+</pre>
+<div class="peu">
+<hr>
+Carlos Gutiérrez 2024 
+
+</body>
+</html>
